@@ -5,6 +5,27 @@ npm i  @iconify/react @iconify/icons-mdi --s
 "@iconify/react": "^1.1.3",
 "google-map-react": "^2.1.9",
 
+// npm install --save-dev @iconify/react 
+@iconify-icons/whh
+@iconify-icons/ion
+// npm install --save-dev @iconify/react @iconify-icons/ion
+import { Icon, InlineIcon } from '@iconify/react';
+import thunderstormSharp from '@iconify-icons/ion/thunderstorm-sharp';
+
+// npm install --save-dev @iconify/react @iconify-icons/wi
+import { Icon, InlineIcon } from '@iconify/react';
+import volcanoIcon from '@iconify-icons/wi/volcano';
+
+// npm install --save-dev @iconify/react @iconify-icons/wi
+import { Icon, InlineIcon } from '@iconify/react';
+import snowflakeCold from '@iconify-icons/wi/snowflake-cold';
+
+
+// npm install --save-dev @iconify/react @iconify-icons/openmoji
+import { Icon, InlineIcon } from '@iconify/react';
+import icebergIcon from '@iconify-icons/openmoji/iceberg';
+
+
 
 racfe
 
