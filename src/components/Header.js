@@ -8,7 +8,7 @@ const Header = () => {
          <span>
             <Icon icon={nasaIcon}/>
          </span>
-            Tracker nature events (NASA Api) 
+            Nature Tracker  events (NASA Api) 
          </h1>
          
       </header>

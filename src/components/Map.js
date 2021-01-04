@@ -6,8 +6,7 @@ import LocationMarker from './LocationMarker';
 import LocationInfoBox from './LocationInfoBox';
 // npm install --save-dev @iconify/react @iconify-icons/ion
 import thunderstormSharp from '@iconify-icons/ion/thunderstorm-sharp';
-// import volcanoIcon from '@iconify-icons/wi/volcano';
-
+import volcanoIcon from '@iconify-icons/wi/volcano';
 import icebergIcon from '@iconify-icons/openmoji/iceberg';
 
 
@@ -17,15 +16,16 @@ import icebergIcon from '@iconify-icons/openmoji/iceberg';
 const Map = ({eventData, center, zoom}) => {
    // const env = `${process.env.API_KEY_MAP}`;
    // console.log(env);
-   console.log('from maps->', eventData);
+   // console.log('from maps->', eventData);
    // on click envent
    const [locationInfo, setLocationInfo]  = useState(null);
 
-   const markers = eventData.map( ev => {
+   const markers = eventData.map( (ev, i) => {
       // console.log('from event', ev);
       // check for fires
       if(ev.categories[0].id === 8) {
-         return  <LocationMarker 
+         return  <LocationMarker
+                  key={i} 
                   lat={ev.geometries[0].coordinates[1]} 
                   lng={ev.geometries[0].coordinates[0]} 
                   onClick={() => setLocationInfo({id: ev.id, title: ev.title}) }/>
@@ -52,27 +52,53 @@ const Map = ({eventData, center, zoom}) => {
          // // });
          // return geo
          return   <LocationMarker 
-                  lat={ev.geometries[0].coordinates[1]} 
-                  lng={ev.geometries[0].coordinates[0]} 
-                  onClick={() => setLocationInfo({id: ev.id, title: ev.title})}
-                  icon = {thunderstormSharp} />
+                     key={i} 
+                     lat={ev.geometries[0].coordinates[1]} 
+                     lng={ev.geometries[0].coordinates[0]} 
+                     onClick={() => setLocationInfo({id: ev.id, title: ev.title})}
+                     color={'blue'}
+                     icon = {thunderstormSharp} />
             // });
       }
 
       if(ev.categories[0].id === 15) {
-         console.log('*******************--------------------');
+         // console.log('*******************--------------------');
          // console.log('volcanoes',ev.geometries[0]);
-         const volcano = ev.geometries[0];
-         const lat = volcano.coordinates[1];
-         const lon = volcano.coordinates[0];
-         console.log('volcanoes',volcano);
-         console.log('*******************--------------------');
+         const icebergs = ev.geometries[0];
+         const lat = icebergs.coordinates[1];
+         const lon = icebergs.coordinates[0];
+         // console.log('icebergses',icebergs);
+         // console.log('*******************--------------------');
          return  <LocationMarker 
-               lat={lat} 
-               lng={lon} 
-               onClick={() => setLocationInfo({id: ev.id, title: ev.title})}
-               icon = {icebergIcon} />
+                  key={i} 
+                  lat={lat} 
+                  lng={lon} 
+                  onClick={() => setLocationInfo({id: ev.id, title: ev.title})}
+                  color={'white'}
+                  icon = {icebergIcon} />
       }
+
+      if(ev.categories[0].id === 12) {
+         // console.log('*******************--------------------');
+         // console.log('*******************', ev.geometries[0]);
+         const volcano = ev.geometries[0] ? ev.geometries[0] : null;
+         // console.log('volcanoes',volcano);
+         // console.log('volcanoes',volcano.coordinates.length);
+         const volcanoLon = volcano.coordinates.length < 2 ? 127.84286499023438 : volcano.coordinates[0];
+         const volcanoLat = volcano.coordinates[1] ? volcano.coordinates[1] : 1.6633016286241373 ;
+         // console.log('volcanoes volcanoLon',volcanoLon);
+         // console.log('volcanoes volcanoLat',volcanoLat);
+         // console.log('volcanoes',volcano);
+         return  <LocationMarker 
+                     key={i}
+                     lat={volcanoLat} 
+                     lng={volcanoLon} 
+                     onClick={() => setLocationInfo({id: ev.id, title: ev.title})}
+                     color={'yellow'}
+                     icon = {volcanoIcon} />
+      }
+
+
 
       return null;
       
