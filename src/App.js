@@ -1,9 +1,10 @@
-
+import Map from './components/Map';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola react!</h1>
+      
+      <Map />
     </div>
   );
 }
