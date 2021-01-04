@@ -1,3 +1,10 @@
+npm i google-map-react @iconify/react @iconify/icons-mdi --s
+npm i  @iconify/react @iconify/icons-mdi --s
+
+"@iconify/icons-mdi": "^1.0.152",
+"@iconify/react": "^1.1.3",
+"google-map-react": "^2.1.9",
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
