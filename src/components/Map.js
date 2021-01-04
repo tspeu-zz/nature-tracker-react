@@ -1,6 +1,7 @@
 // import React from 'react'
 import GoogleMapReact from 'google-map-react';
 // import env from '../../.env.local';
+import LocationMarker from './LocationMarker';
 
 //     const _URL = `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`;
 
@@ -12,8 +13,9 @@ const Map = ({center, zoom}) => {
          <GoogleMapReact 
             bootstrapURLKeys={{key:'AIzaSyDZhTtxnn1rmZMTfJzCKO96NFbS_2fIUwM'}}
             defaultCenter={center}
-            defaultZoom={zoom}
-            >
+            defaultZoom={zoom}>
+
+            <LocationMarker lat={center.lat} lng={center.lng} />
 
          </GoogleMapReact>
       </div>
