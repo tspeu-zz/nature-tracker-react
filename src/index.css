@@ -15,7 +15,7 @@ code {
 
 .header {
   padding: 10px;
-  background: rgb(0, 77, 128);
+  background: rgb(90, 128, 0);
   color: #ffffff;
   position: fixed;
   top: 0;
@@ -25,7 +25,7 @@ code {
 }
 
 .header span {
-  color: firebrick;
+  color: rgb(178, 34, 135);
   font-size: 2rem;
 }
 .header h1 {

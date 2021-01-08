@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nature-tracker-react/static/css/main.35a5666f.chunk.css",
+    "main.js": "/nature-tracker-react/static/js/main.b1516261.chunk.js",
+    "main.js.map": "/nature-tracker-react/static/js/main.b1516261.chunk.js.map",
+    "runtime-main.js": "/nature-tracker-react/static/js/runtime-main.90a19a16.js",
+    "runtime-main.js.map": "/nature-tracker-react/static/js/runtime-main.90a19a16.js.map",
+    "static/js/2.df0a4dc1.chunk.js": "/nature-tracker-react/static/js/2.df0a4dc1.chunk.js",
+    "static/js/2.df0a4dc1.chunk.js.map": "/nature-tracker-react/static/js/2.df0a4dc1.chunk.js.map",
+    "static/js/3.0e9eba97.chunk.js": "/nature-tracker-react/static/js/3.0e9eba97.chunk.js",
+    "static/js/3.0e9eba97.chunk.js.map": "/nature-tracker-react/static/js/3.0e9eba97.chunk.js.map",
+    "index.html": "/nature-tracker-react/index.html",
+    "static/css/main.35a5666f.chunk.css.map": "/nature-tracker-react/static/css/main.35a5666f.chunk.css.map",
+    "static/js/2.df0a4dc1.chunk.js.LICENSE.txt": "/nature-tracker-react/static/js/2.df0a4dc1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90a19a16.js",
+    "static/js/2.df0a4dc1.chunk.js",
+    "static/css/main.35a5666f.chunk.css",
+    "static/js/main.b1516261.chunk.js"
+  ]
+}
